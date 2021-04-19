@@ -1,6 +1,7 @@
 package com.example.TimeServlet;
 
 import java.io.*;
+import java.util.Date;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
@@ -16,9 +17,12 @@ public class HelloServlet extends HttpServlet {
         response.setContentType("text/html");
 
         // Hello
+        Date today = new Date();
+
         PrintWriter out = response.getWriter();
         out.println("<html>");
         out.println("<h1>" + message + "</h1>");
+        out.println("<h1>" + today + "</h1>");
         out.println("</html>");
     }
 
