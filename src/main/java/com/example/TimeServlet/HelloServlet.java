@@ -18,6 +18,7 @@ public class HelloServlet extends HttpServlet {
 
         // Hello
         Date today = new Date();
+
         PrintWriter out = response.getWriter();
         out.println("<html>");
         out.println("<h1>" + message + "</h1>");
